@@ -28,9 +28,12 @@ export default function RootLayout({
     <html lang="en">
       <body className={jakarta.className}>
         <AuthProvider>
+          
           <Navbar />
 
-          <main>{children}</main>
+         <main className="min-h-screen">
+            {children}
+          </main>
 
           <ScrollToTop/>
 

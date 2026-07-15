@@ -43,8 +43,10 @@ export default function HeroSection() {
         relative
         overflow-hidden
         bg-[#050505]
-        pt-36
-        pb-40
+        pt-24
+        pb-20
+        sm:pt-28
+        sm:pb-24
         lg:pt-40
         lg:pb-52
       "
@@ -92,7 +94,8 @@ export default function HeroSection() {
           className="
             grid
             items-center
-            gap-20
+            gap-12
+            lg:gap-20
             lg:grid-cols-2
           "
         >
@@ -132,10 +135,11 @@ export default function HeroSection() {
               variants={itemVariant}
               className="
                 mt-8
-                text-5xl
                 font-black
                 leading-[1.05]
                 text-white
+                text-4xl
+                sm:text-5xl
                 md:text-6xl
                 xl:text-7xl
               "
@@ -156,8 +160,10 @@ export default function HeroSection() {
               className="
                 mt-8
                 max-w-xl
-                text-lg
-                leading-8
+                text-base
+                  leading-7
+                  sm:text-lg
+                  sm:leading-8
                 text-white/65
               "
             >
@@ -235,7 +241,8 @@ export default function HeroSection() {
               className="
                 mt-16
                 grid
-                grid-cols-3
+                grid-cols-1
+                sm:grid-cols-3
                 gap-5
               "
             >
@@ -305,7 +312,9 @@ export default function HeroSection() {
 
               {/* Property Image */}
 
-              <div className="relative h-[560px]">
+              <div className="relative h-[420px]
+                sm:h-[500px]
+                lg:h-[560px]">
                                 <Image
                   src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?q=80&w=1400&auto=format&fit=crop"
                   alt="Luxury Villa"
@@ -354,7 +363,7 @@ export default function HeroSection() {
 
                   </span>
 
-                  <h2 className="mt-3 text-4xl font-black text-white">
+                  <h2 className="mt-3 text-3xl sm:text-4xl font-black text-white">
 
                     Ocean View Residence
 
@@ -374,7 +383,7 @@ export default function HeroSection() {
                         Starting From
                       </p>
 
-                      <h3 className="mt-1 text-5xl font-black text-white">
+                      <h3 className="mt-1 text-3xl sm:text-4xl lg:text-5xl font-black text-white">
 
                         ₹3.85 Cr
 

@@ -1,5 +1,4 @@
 import HeroSection from "../components/home/HeroSection";
-import SearchSection from "../components/home/SearchSection";
 import PropertyCategories from "../components/home/PropertyCategories";
 import FeaturedProperties from "../components/home/FeaturedProperties";
 import WhyChooseRedSand from "../components/home/WhyChooseRedSand";
@@ -14,7 +13,6 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <SearchSection />
       <PropertyCategories />
       <FeaturedProperties />
       <WhyChooseRedSand />

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion , type Variants} from "framer-motion";
+import { motion, type Variants } from "framer-motion";
 import {
   HiAdjustmentsHorizontal,
   HiBuildingOffice2,
@@ -16,7 +16,6 @@ import { FiCheck, FiChevronDown } from "react-icons/fi";
 
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-
 
 const tabs = ["Buy", "Rent", "Commercial"];
 
@@ -153,7 +152,12 @@ export default function SearchSection() {
     router.push(`/properties?${params.toString()}`);
   };
   return (
-    <section className="relative z-30 -mt-16 pb-16 md:-mt-28 md:pb-24">
+    <section
+      className="relative z-30 -mt-16 pb-16 -mt-6
+sm:-mt-10
+lg:-mt-20
+xl:-mt-28"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariant}
@@ -181,8 +185,7 @@ export default function SearchSection() {
 
           <div className="absolute -right-20 bottom-0 h-72 w-72 rounded-full bg-amber-500/10 blur-[120px]" />
 
-          <div className="relative p-5 sm:p-6 lg:p-12">
-
+          <div className="relative p-4 sm:p-6 lg:p-12">
             <motion.div variants={itemVariant} className="flex flex-wrap gap-4">
               {tabs.map((tab, index) => (
                 <button
@@ -198,9 +201,15 @@ export default function SearchSection() {
                   }
                   className={`
     rounded-full
-    px-7
-    py-3
-    text-base
+    px-5
+    sm:px-6
+    lg:px-7
+
+    py-2.5
+    lg:py-3
+
+    text-sm
+    sm:text-base
     font-semibold
     transition-all
     duration-300
@@ -217,7 +226,6 @@ export default function SearchSection() {
               ))}
             </motion.div>
 
-
             <motion.div variants={itemVariant} className="mt-10 max-w-3xl">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-tight text-white ">
                 Find Your
@@ -227,26 +235,30 @@ export default function SearchSection() {
                 </span>
               </h2>
 
-              <p className="mt-5 text-lg leading-8 text-white/65">
+              <p className="mt-5 text-base sm:text-lg leading-7 sm:leading-8 text-white/65">
                 Search verified apartments, villas, gated communities,
                 commercial spaces and premium investment opportunities across
                 India's fastest-growing cities.
               </p>
             </motion.div>
 
-
             <motion.div
               variants={itemVariant}
               className="
 
-relative
-grid
-grid-cols-1
-gap-5
-overflow-visible
-md:grid-cols-2
-xl:grid-cols-[1.35fr_1fr_1fr_1fr_220px]
-"
+                  relative
+                  grid
+                  overflow-visible
+                  grid-cols-1
+
+                  sm:grid-cols-1
+
+                  md:grid-cols-2
+
+                  lg:grid-cols-2
+
+                  xl:grid-cols-[1.35fr_1fr_1fr_1fr_220px]
+                  "
             >
               {/* Location */}
               {/* Location */}
@@ -258,8 +270,11 @@ xl:grid-cols-[1.35fr_1fr_1fr_1fr_220px]
     border
     border-white/10
     bg-white/[0.04]
-    px-5
-    py-4
+   px-4
+sm:px-5
+
+py-3
+sm:py-4
     backdrop-blur-2xl
     transition-all
     duration-300
@@ -312,9 +327,10 @@ bottom-full
 left-0
 right-0
 mb-3
-z-[999]
 
-max-h-72
+max-h-60
+
+sm:max-h-72
 overflow-y-auto
 
 rounded-2xl
@@ -432,8 +448,9 @@ shadow-[0_20px_50px_rgba(0,0,0,0.45)]
           left-0
           right-0
           mt-3
-          z-[999]
-          max-h-72
+         max-h-60
+
+sm:max-h-72
           overflow-y-auto
           rounded-2xl
           border
@@ -543,8 +560,9 @@ shadow-[0_20px_50px_rgba(0,0,0,0.45)]
           left-0
           right-0
           mt-3
-          z-[999]
-          max-h-72
+         max-h-60
+
+sm:max-h-72
           overflow-y-auto
           rounded-2xl
           border
@@ -657,8 +675,9 @@ shadow-[0_20px_50px_rgba(0,0,0,0.45)]
           left-0
           right-0
           mt-3
-          z-[999]
-          max-h-72
+          max-h-60
+
+sm:max-h-72
           overflow-y-auto
           rounded-2xl
           border
@@ -724,8 +743,8 @@ shadow-[0_20px_50px_rgba(0,0,0,0.45)]
                     flex
                     h-16
                     w-full
-                    h-[72px]
-                    sm:h-[82px]
+                    sm:h-[72px]
+
                     xl:h-[92px]
                     xl:min-w-[220px]
                     items-center
@@ -737,8 +756,9 @@ shadow-[0_20px_50px_rgba(0,0,0,0.45)]
                     via-orange-500
                     to-amber-500
                     px-8
-                    text-base
-                    md:text-lg
+                   text-sm
+sm:text-base
+lg:text-lg
                     font-bold
                     text-white
                     shadow-[0_20px_50px_rgba(249,115,22,.35)]
@@ -783,8 +803,14 @@ shadow-[0_20px_50px_rgba(0,0,0,0.45)]
                     border
                     border-white/10
                     bg-white/5
-                    px-5
-                    py-2.5
+                    px-4
+sm:px-5
+
+py-2
+sm:py-2.5
+
+text-xs
+sm:text-sm
                     text-sm
                     font-medium
                     text-white/80
@@ -812,7 +838,9 @@ shadow-[0_20px_50px_rgba(0,0,0,0.45)]
             -bottom-12
             left-1/2
             h-32
-            w-[90%]
+            w-full
+
+sm:w-[90%]
             -translate-x-1/2
             rounded-full
             bg-orange-500/10
